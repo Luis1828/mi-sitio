@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Proyectos — Luis Saucedo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon" href="favicon.png" type="image/png">
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+          <a class="navbar-brand" href="index.html">Luis Saucedo</a>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+              <li class="nav-item"><a class="nav-link active" aria-current="page" href="proyectos.html">Proyectos</a></li>
+              <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container my-5">
+      <h1>Proyectos destacados</h1>
+
+      <article class="mt-4">
+        <h2>Visualizador de Torres de Hanoi (Servidor HTTP 0.9)</h2>
+        <figure>
+          <img src="https://via.placeholder.com/800x300.png?text=Torres+de+Hanoi" alt="Visualizador Torres de Hanoi" class="img-fluid">
+          <figcaption>Visualizador desarrollado como servidor HTTP 0.9 que devuelve estados JSON.</figcaption>
+        </figure>
+        <p>
+          Descripción extensa: Este proyecto consiste en un servidor web ligero implementado en Java que responde peticiones HTTP 0.9. La finalidad fue diseñar una aplicación capaz de calcular y mostrar paso a paso la solución de las Torres de Hanoi para N anillos. El servidor sirve archivos estáticos (HTML + JS) y expone un endpoint que devuelve el estado de las torres en formato JSON para un paso dado.
+        </p>
+        <p>
+          Funcionalidades:
+          <ul>
+            <li>Servidor HTTP 0.9 implementado en Java (escucha en puerto configurable).</li>
+            <li>Cálculo recursivo de los pasos (lógica de solución de las Torres de Hanoi).</li>
+            <li>Cliente web que consume el endpoint con fetch para actualizar la visualización paso a paso.</li>
+            <li>Manejo de múltiples valores de N y validaciones de entrada en el cliente.</li>
+          </ul>
+        </p>
+        <p>
+          Tecnologías utilizadas: Java (Sockets), HTML, JavaScript (fetch), JSON. Herramientas: IntelliJ IDEA, Git.
+        </p>
+      </article>
+
+      <hr>
+
+      <article class="mt-4">
+        <h2>Editor de Figuras Geométricas por Capas</h2>
+        <figure>
+          <img src="https://via.placeholder.com/800x300.png?text=Editor+de+Figuras" alt="Editor de figuras" class="img-fluid">
+          <figcaption>Editor de figuras con selección, orden y cambios de color.</figcaption>
+        </figure>
+        <p>
+          Descripción extensa: Proyecto de escritorio en Java que permite crear y editar figuras geométricas (círculo, rectángulo, cuadrado, triángulo, trapecio) organizadas por capas. Se implementó una lista propia (no java.util) para gestionar la colección de figuras y se aplicó el patrón Observer para actualizar la vista cuando cambia el modelo.
+        </p>
+        <p>
+          Funcionalidades:
+          <ul>
+            <li>Dibujo de figuras en un panel gráfico.</li>
+            <li>Selección y edición (mover, cambiar color, eliminar).</li>
+            <li>Cambio de orden de dibujo (capas) y persistencia básica en archivo.</li>
+            <li>Tests unitarios para garantizar comportamiento en las operaciones clave.</li>
+          </ul>
+        </p>
+        <p>
+          Tecnologías utilizadas: Java Swing, patrón Observer, estructuras de datos propias, JUnit para pruebas.
+        </p>
+      </article>
+
+      <hr>
+
+      <article class="mt-4">
+        <h2>Sistema de Registro de Bandas para Concurso (Base de Datos)</h2>
+        <figure>
+          <img src="https://via.placeholder.com/800x300.png?text=Concurso+de+Bandas" alt="Sistema Concurso Bandas" class="img-fluid">
+          <figcaption>Plataforma para registrar y evaluar bandas en un concurso musical.</figcaption>
+        </figure>
+        <p>
+          Descripción extensa: Este proyecto abarca la construcción de la base de datos y una interfaz en Java para gestionar un concurso de bandas. El objetivo fue cubrir requisitos reales de una aplicación de convocatoria y evaluación: programación de bandas en varias noches, evaluación por jurados, seguridad en logins y manejo de transacciones.
+        </p>
+        <p>
+          Funcionalidades:
+          <ul>
+            <li>Registro de bandas, jurados y shows en tablas normalizadas.</li>
+            <li>Evaluación por jurados con cálculo de podios solo en la noche final.</li>
+            <li>Login con contraseñas encriptadas y roles de usuario.</li>
+            <li>Uso de procedimientos almacenados, triggers, vistas y manejo de concurrencia.</li>
+            <li>Interfaz gráfica con operaciones CRUD en tablas principales.</li>
+          </ul>
+        </p>
+        <p>
+          Tecnologías utilizadas: PostgreSQL (PL/pgSQL, triggers, funciones, pgcrypto), Java para la interfaz, gestión de transacciones.
+        </p>
+      </article>
+
+    </main>
+
+    <footer class="bg-light py-4 mt-5">
+      <div class="container text-center">
+        <p>Redes: <a href="https://www.linkedin.com/in/Luis1828" target="_blank" rel="noopener">LinkedIn</a> — Repositorio: <a href="https://github.com/Luis1828/mi-sitio" target="_blank" rel="noopener">GitHub</a></p>
+        <p>Sitio en GitHub Pages: <a href="https://luis1828.github.io/mi-sitio/" target="_blank" rel="noopener">https://luis1828.github.io/mi-sitio/</a></p>
+        <p>© <span id="year2"></span> Luis Saucedo</p>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById('year2').textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
